@@ -45,14 +45,14 @@
         },
         "patientSearch": {
             "address": {
-            "label": "Location.village",
-            "placeholder": "Location.village",
+            "label": "Location",
+            "placeholder": "Enter Commune",
             "field": "city_village"
             },
             "customAttributes": {
-                "label": "CUSTOM_SEARCH",
+                "label": "Attribute Search",
                 "placeholder": "Enter",
-                "fields": ["impl.phoneNumber","impl.2ndPhoneNumber","impl.mothersFirstName"]
+                "fields": ["phoneNumber","2ndPhoneNumber","mothersFirstName"]
             }
         },
         "patientSearchResults": {
@@ -60,7 +60,7 @@
                 "fields":["city_village"]
             },
             "personAttributes": {
-                "fields": ["impl.phoneNumber","impl.2ndPhoneNumber"]
+                "fields": ["phoneNumber","2ndPhoneNumber"]
             }
         },
         "afterVisitSaveForwardUrl" : "./index.html#/search"
