@@ -52,7 +52,7 @@
             "customAttributes": {
                 "label": "Attribute Search",
                 "placeholder": "Enter Phone Number",
-                "fields": ["impl.phoneNumber","impl.2ndPhoneNumber","impl.mothersFirstName"]
+                "fields": ["impl.phoneNumber","impl.2ndPhoneNumber"]
             }
         },
         "patientSearchResults": {
