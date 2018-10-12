@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/bahmni_config/openmrs/apps/registration/registrationCardLayout/css/print.css"/>
+
+<div style="width:140mm;height:20mm; text-align: center">
+    <p> 
+        <img style="float: right; width: 47mm; height: 20mm;" src="/bahmni_config/openmrs/apps/registration/registrationCardLayout/images/hsc-rect-logo.png" alt="" />
+        <div style="float: left; width: 35mm; height: 20mm;" ng-if="patient.primaryIdentifier.identifier" > <img id="barcode"
+            jsbarcode-value="{{patient.primaryIdentifier.identifier}}"
+            jsbarcode-width="1"
+            jsbarcode-height="60"
+            jsbarcode-margin="0"
+            jsbarcode-displayValue="true"
+            jsbarcode-textAlign="center"
+            jsbarcode-textMargin="0"
+            jsbarcode-fontSize="18"
+       /> </div>
+    </p>
+</div>
+<hr style="width: 100%;">
+<div style="width:130mm; height:70mm; position: relative; left: 7mm;" >
+    <p style="text-align:left; font-size: 24px; line-height: 32px">
+        Nom: {{patient.familyName}}<br>
+        Prénom: {{patient.givenName}}<br>
+        Date De Naissance: {{patient.birthdate | date: 'dd-MM-yyyy'}} <span style="float:right; left:10mm"> Sexe: {{patient.gender}} </span><br>
+        Adresse: {{patient.address.address2}} {{patient.address.address1}} {{patient.address.address3}} {{patient.address.cityVillage}} {{patient.address.stateProvince}} {{patient.address.country}} <br>
+        Téléphone: {{patient["impl.phoneNumber"]}}
+    </p>    
+</div>
+
+<script type="text/javascript" src="/bahmni_config/openmrs/apps/JsBarcode.all.min.js"></script>
+<script>
+    (function() {
+        JsBarcode("#barcode").init();
+    })();
+</script>
