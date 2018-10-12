@@ -62,6 +62,13 @@
                 "fields": ["impl.phoneNumber","impl.2ndPhoneNumber"]
             }
         },
+        "printOptions":[
+            {
+                "translationKey": "REGISTRATION_PRINT_REG_CARD_KEY",
+                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print.html",
+                "shortcutKey": "p"
+            }
+        ],
         "afterVisitSaveForwardUrl" : "./index.html#/search"
     }
 }
