@@ -22,7 +22,7 @@
         Prénom: {{patient.givenName}}<br>
         Date De Naissance: {{patient.birthdate | date: 'dd-MM-yyyy'}} <span style="float:right; left:10mm"> Sexe: {{patient.gender}} </span><br>
         Adresse: {{patient.address.address2}} {{patient.address.address1}} {{patient.address.address3}} {{patient.address.cityVillage}} {{patient.address.stateProvince}} {{patient.address.country}} <br>
-        Téléphone: {{patient["impl.phoneNumber"]}}
+        Téléphone: {{patient.phoneNumber}}
     </p>    
 </div>
 
