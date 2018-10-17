@@ -51,7 +51,7 @@
             "customAttributes": {
                 "label": "Attribute Search",
                 "placeholder": "Enter Phone Number",
-                "fields": ["impl.phoneNumber","impl.2ndPhoneNumber"]
+                "fields": ["phoneNumber","2ndPhoneNumber"]
             }
         },
         "patientSearchResults": {
@@ -59,7 +59,7 @@
                 "fields":["city_village"]
             },
             "personAttributes": {
-                "fields": ["impl.phoneNumber","impl.2ndPhoneNumber"]
+                "fields": ["phoneNumber","2ndPhoneNumber"]
             }
         },
         "printOptions":[
