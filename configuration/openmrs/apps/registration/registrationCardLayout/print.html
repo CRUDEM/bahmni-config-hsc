@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/bahmni_config/openmrs/apps/registration/registrationCardLayout/css/print.css"/>
-
+<div style="border: solid 2px #000080;">
 <div style="width:140mm;height:20mm; text-align: center">
     <p> 
         <img style="float: right; width: 47mm; height: 20mm;" src="/bahmni_config/openmrs/apps/registration/registrationCardLayout/images/hsc-rect-logo.png" alt="" />
@@ -15,20 +15,23 @@
        /> </div>
     </p>
 </div>
-<hr style="width: 100%;">
+
 <div style="width:130mm; height:70mm; position: relative; left: 7mm;" >
+    <hr style="width: 100%; position: relative; align-content: center">
     <p style="text-align:left; font-size: 24px; line-height: 32px">
-        Nom: {{patient.familyName}}<br>
-        Prénom: {{patient.givenName}}<br>
-        Date De Naissance: {{patient.birthdate | date: 'dd-MM-yyyy'}} <span style="float:right; left:10mm"> Sexe: {{patient.gender}} </span><br>
-        Adresse: <span ng-if="patient.address.address2">{{patient.address.address2}}</span>
-        <span ng-if="patient.address.address1">,{{patient.address.address1}}</span>
-        <span ng-if="patient.address.address3">,{{patient.address.address3}}</span>
-        <span ng-if="patient.address.cityVillage">,{{patient.address.cityVillage}}</span>
-        <span ng-if="patient.address.stateProvince">,{{patient.address.stateProvince}}</span>
-        <span ng-if="patient.address.country">,{{patient.address.country}}</span> <br>
-        Téléphone: {{patient["impl.phoneNumber"]}}
+        <strong>Numéro Dossier:</strong> {{patient.primaryIdentifier.identifier}} <br>
+        <strong>Nom:</strong> {{patient.familyName}}<br>
+        <strong>Prénom:</strong> {{patient.givenName}}<br>
+        <strong>Date De Naissance:</strong> {{patient.birthdate | date: 'dd-MM-yyyy'}} <span style="float:right; left:10mm"> <strong>Sexe:</strong> {{patient.gender}} </span><br>
+        <strong>Adresse:</strong> <span ng-if="patient.address.address2">{{patient.address.address2}},</span>
+        <span ng-if="patient.address.address1">{{patient.address.address1}},</span>
+        <span ng-if="patient.address.address3">{{patient.address.address3}},</span>
+        <span ng-if="patient.address.cityVillage">{{patient.address.cityVillage}},</span>
+        <span ng-if="patient.address.stateProvince">{{patient.address.stateProvince}},</span>
+        <span ng-if="patient.address.country">{{patient.address.country}}</span> <br>
+        <strong>Téléphone:</strong> {{patient.phoneNumber}}
     </p>    
+</div>
 </div>
 
 <script type="text/javascript" src="/bahmni_config/openmrs/apps/JsBarcode.all.min.js"></script>
