@@ -22,7 +22,7 @@
         <strong>Numéro Dossier:</strong> {{patient.primaryIdentifier.identifier}} <br>
         <strong>Nom:</strong> {{patient.familyName}}<br>
         <strong>Prénom:</strong> {{patient.givenName}}<br>
-        <strong>Date De Naissance:</strong> {{patient.birthdate | date: 'dd-MM-yyyy'}} <span style="float:right; left:10mm"> <strong>Sexe:</strong> {{patient.gender}} </span><br>
+        <strong>Date de naissance:</strong> {{patient.birthdate | date: 'dd-MM-yyyy'}} <span style="float:right; left:10mm"> <strong>Sexe:</strong> {{patient.gender}} </span><br>
         <strong>Adresse:</strong> <span ng-if="patient.address.address2">{{patient.address.address2}},</span>
         <span ng-if="patient.address.address1">{{patient.address.address1}},</span>
         <span ng-if="patient.address.address3">{{patient.address.address3}},</span>
