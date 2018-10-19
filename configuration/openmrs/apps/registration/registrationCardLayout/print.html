@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="/bahmni_config/openmrs/apps/registration/registrationCardLayout/css/print.css"/>
-<div style="border: solid 2px #000080;">
-<div style="width:140mm;height:20mm; text-align: center">
+<div style="width:100%;border: solid 2px #000080;">
+<div style="width:100%;height:20mm; text-align: center">
     <p> 
-        <img style="float: right; width: 47mm; height: 20mm;" src="/bahmni_config/openmrs/apps/registration/registrationCardLayout/images/hsc-rect-logo.png" alt="" />
+        <img style="float: right; width: 47mm; height: 20mm; position: relative; right: 4%;" src="/bahmni_config/openmrs/apps/registration/registrationCardLayout/images/hsc-rect-logo.png" alt="" />
         <div style="float: left; width: 35mm; height: 20mm;" ng-if="patient.primaryIdentifier.identifier" > <img id="barcode"
             jsbarcode-value="{{patient.primaryIdentifier.identifier}}"
             jsbarcode-width="1"
@@ -16,13 +16,13 @@
     </p>
 </div>
 
-<div style="width:130mm; height:70mm; position: relative; left: 7mm;" >
-    <hr style="width: 100%; position: relative; align-content: center">
-    <p style="text-align:left; font-size: 24px; line-height: 32px">
+<div style="width:90%; text-align: left; left: 2%;" >
+    <hr style="width: 100%; position: relative; align-content: center; left: 5%;">
+    <p style="text-align:left; font-size: 24px; line-height: 120%; padding-left: 10px">
         <strong>Numéro Dossier:</strong> {{patient.primaryIdentifier.identifier}} <br>
         <strong>Nom:</strong> {{patient.familyName}}<br>
         <strong>Prénom:</strong> {{patient.givenName}}<br>
-        <strong>Date de naissance:</strong> {{patient.birthdate | date: 'dd-MM-yyyy'}} <span style="float:right; left:10mm"> <strong>Sexe:</strong> {{patient.gender}} </span><br>
+        <strong>Date de naissance:</strong> {{patient.birthdate | date: 'dd-MM-yyyy'}} <span style="float:right; right: 20px;"> <strong>Sexe:</strong> {{patient.gender}}</span><br>
         <strong>Adresse:</strong> <span ng-if="patient.address.address2">{{patient.address.address2}},</span>
         <span ng-if="patient.address.address1">{{patient.address.address1}},</span>
         <span ng-if="patient.address.address3">{{patient.address.address3}},</span>
