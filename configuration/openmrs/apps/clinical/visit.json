@@ -1,0 +1,13 @@
+{
+    "general":{
+        "translationKey": "DASHBOARD_TAB_GENERAL_KEY",
+        "displayByDefault": true,
+        "printing": {
+            "title": "Bahmni",
+            "header": "Visit",
+            "logo": "../images/bahmniLogo.png"
+        },
+        "defaultSections": true,
+        "sections": {}
+    }
+}
