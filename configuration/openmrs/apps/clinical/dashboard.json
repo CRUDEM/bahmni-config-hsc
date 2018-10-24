@@ -1,9 +1,20 @@
 {
-    "general":{
-        "translationKey":"DASHBOARD_TAB_GENERAL_KEY",
-        "displayByDefault":true,
-        "maxRecentlyViewedPatients":10,
-        "sections":{
+  "general":{
+    "translationKey":"DASHBOARD_TAB_GENERAL_KEY",
+    "displayByDefault":true,
+    "maxRecentlyViewedPatients":10,
+    "sections":{
+      "visits":{
+        "translationKey":"DASHBOARD_TITLE_VISITS_KEY",
+        "type":"visits",
+        "displayOrder":1,
+        "showDetailsButton": true,
+        "dashboardConfig":{
+          "title":null,
+          "maximumNoOfVisits":5,
+          "groupByVisits":true
         }
+      }
     }
+  }
 }
