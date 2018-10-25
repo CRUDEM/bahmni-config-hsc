@@ -141,5 +141,6 @@
     "DELETE_LABEL": "Delete",
     "EDIT_LABEL": "Edit",
 
-    "OBS_ABNORMAL_TRANSLATE_KEY": "Abnormal"
+    "OBS_ABNORMAL_TRANSLATE_KEY": "Abnormal",
+    "TRIAGE_INFORMATION": "Triage"
 }
