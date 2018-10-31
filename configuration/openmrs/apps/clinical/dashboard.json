@@ -14,6 +14,14 @@
           "maximumNoOfVisits":5,
           "groupByVisits":true
         }
+      },
+      "diagnosis":{
+        "translationKey":"DASHBOARD_TITLE_DIAGNOSIS_KEY",
+        "type":"diagnosis",
+        "showDetailsButton": true,
+        "showCertainty":true,
+        "showOrder":true,
+        "displayOrder":15
       }
     }
   }

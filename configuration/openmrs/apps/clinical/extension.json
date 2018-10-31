@@ -35,6 +35,17 @@
     "order": 5,
     "requiredPrivilege": "app:clinical:consultationTab"
   },
+  "diagnosis": {
+    "id": "bahmni.clinical.consultation.diagnosis",
+    "extensionPointId": "org.bahmni.clinical.consultation.board",
+    "type": "link",
+    "label": "Diagnosis",
+    "translationKey":"DIAGNOSIS_BOARD_LABEL_KEY",
+    "url": "diagnosis",
+    "icon": "fa-user-md",
+    "order": 2,
+    "requiredPrivilege": "app:clinical:diagnosisTab"
+},
   "bahmniClinicalConceptSetGroupObservationsVitalsForm": {
     "id": "bahmni.clinical.conceptSetGroup.observations.VitalsForm",
     "extensionPointId": "org.bahmni.clinical.conceptSetGroup.observations",
