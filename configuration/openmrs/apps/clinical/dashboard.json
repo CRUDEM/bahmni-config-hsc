@@ -22,7 +22,133 @@
         "showCertainty":true,
         "showOrder":true,
         "displayOrder":15
+      },
+      "conditions": {
+        "translationKey":"CONDITION_LIST_DISPLAY_CONTROL_TITLE",
+        "type": "conditionsList",
+        "displayOrder": 20
+      },
+      "treatments":{
+        "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
+        "type":"treatment",
+        "displayOrder":95,
+        "dashboardConfig":{
+            "showDetailsButton": true,
+            "showRoute":true,
+            "showDrugForm":true,
+            "numberOfVisits":5,
+            "showOtherActive":true
+        },
+        "expandedViewConfig":{
+            "showDetailsButton": true,
+            "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
+            "showFlowSheet":true,
+            "showListView":true,
+            "showRoute":true,
+            "showDrugForm":true,
+            "showOtherActive":true
+        }
+    },
+    "vitals":{
+      "translationKey":"DASHBOARD_TITLE_VITALS_KEY",
+      "type":"vitals",
+      "isObservation":true,
+      "displayOrder":7,
+      "dashboardConfig":{
+          "showDetailsButton": true,
+          "scope":"latest",
+          "conceptNames":[
+              "HSC_Pulse Data",
+              "HSC_Systolic Blood Pressure Data",
+              "HSC_Diastolic Blood Pressure Data",
+              "HSC_Temperature Data",
+              "HSC_Respiratory Rate Data",
+              "HSC_Oxygen Saturation Data",
+              "HSC_Capillary Refill Time Data",
+              "Height",
+              "Weight",
+              "BMI Data",
+              "BMI Status Data"
+          ]
+      },
+      "expandedViewConfig":{
+          "showDetailsButton": true,
+          "conceptNames":[
+              "HSC_Pulse Data",
+              "HSC_Diastolic Blood Pressure Data",
+              "HSC_Systolic Blood Pressure Data",
+              "HSC_Temperature Data",
+              "HSC_Respiratory Rate Data",
+              "HSC_Oxygen Saturation Data",
+              "HSC_Capillary Refill Time Data",
+              "Height",
+              "Weight",
+              "BMI Data",
+              "BMI Status Data"
+          ],
+          "pivotTable":{
+              "groupBy":"encounters",
+              "obsConcepts":[
+                  "HSC_Pulse Data",
+                  "HSC_Diastolic Blood Pressure Data",
+                  "HSC_Systolic Blood Pressure Data",
+                  "HSC_Temperature Data",
+                  "HSC_Respiratory Rate Data",
+                  "HSC_Oxygen Saturation Data",
+                  "HSC_Capillary Refill Time Data",
+                  "Height",
+                  "Weight",
+                  "BMI Data",
+                  "BMI Status Data"
+              ],
+              "drugConcepts":[
+
+              ],
+              "labConcepts":[
+
+              ]
+          }
       }
+          },
+          "bpPulse":{
+            "type":"observationGraph",
+            "title":"BP / Pulse",
+            "translationKey": "IMPL_BP_PULSE",
+            "config":{
+                "yAxisConcepts":[
+                    "HSC_Systolic Blood Pressure",
+                    "HSC_Diastolic Blood Pressure",
+                    "HSC_Pulse"
+                ],
+                "xAxisConcept":"observationDateTime",
+                "numberOfVisits":10
+            },
+            "displayOrder":120
+        },
+        "growthChart":{
+          "type":"observationGraph",
+          "title":"Growth Chart",
+          "translationKey": "IMPL_GROWTH_CHART",
+          "config":{
+              "yAxisConcepts":[
+                  "BMI"
+              ],
+              "referenceData":"growthChartReference.csv",
+              "numberOfVisits":10
+          },
+          "displayOrder":150
+      },
+      "consultationNote":{
+        "translationKey":"Consultation Note",
+        "isObservation":true,
+        "displayOrder":1000,
+        "dashboardConfig":{
+            "showDetailsButton": false,
+            "scope":"latest",
+            "conceptNames":[
+                "Consultation Note"
+            ]
+        }}
     }
   }
 }
