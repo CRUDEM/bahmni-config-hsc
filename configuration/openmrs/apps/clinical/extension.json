@@ -46,6 +46,17 @@
     "order": 2,
     "requiredPrivilege": "app:clinical:diagnosisTab"
 },
+"bahmniClinicalConsultationOrders": {
+  "id": "bahmni.clinical.consultation.orders",
+  "extensionPointId": "org.bahmni.clinical.consultation.board",
+  "type": "link",
+  "label": "Orders",
+  "translationKey":"ORDERS_BOARD_LABEL_KEY",
+  "url": "orders",
+  "icon": "icon-user-md",
+  "order": 6,
+  "requiredPrivilege": "app:clinical:ordersTab"
+},
   "bahmniClinicalConceptSetGroupObservationsVitalsForm": {
     "id": "bahmni.clinical.conceptSetGroup.observations.VitalsForm",
     "extensionPointId": "org.bahmni.clinical.conceptSetGroup.observations",
