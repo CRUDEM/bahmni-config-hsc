@@ -5,7 +5,9 @@
     "MODULE_LABEL_ACTIVE_PATIENTS_BY_LOCATION": "PatientsByLocation",
     "MODULE_LABEL_OPD_1_KEY": "OPD-1",
     "MODULE_LABEL_ALL_KEY": "All",
-  
+    "MODULE_LABEL_EMERGENCY_KEY":"Emergency",
+    "MODULE_LABEL_PRIORITY_KEY":"Priority",
+    "MODULE_LABEL_QUEUE_KEY":"Queue",
     "IMPL_BP_PULSE":"BP / Pulse",
     "IMPL_GROWTH_CHART":"Growth Chart",
     "DASHBOARD_TITLE_LAB_RESULTS_KEY": "Lab Results",

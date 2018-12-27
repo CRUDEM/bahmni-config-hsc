@@ -9,7 +9,58 @@
       "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
     },
     "label": "Active",
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalPatientsSearchAllPatients": {
+    "id": "bahmni.clinical.patients.search.allPatients",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "translationKey": "MODULE_LABEL_ALL_KEY",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+    },
+    "label": "All",
+    "order": 5,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalPatientsSearchEmergencyPatient": {
+    "id": "bahmni.clinical.patients.search.emergencyPatients",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler":"emrapi.sqlSearch.emergencyPatients",
+      "translationKey": "MODULE_LABEL_EMERGENCY_KEY",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+    },
+    "label": "Emergency",
     "order": 2,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalPatientsSearchPriorityPatient": {
+    "id": "bahmni.clinical.patients.search.priorityPatients",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler":"emrapi.sqlSearch.priorityPatients",
+      "translationKey": "MODULE_LABEL_PRIORITY_KEY",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+    },
+    "label": "Priority",
+    "order": 3,
+    "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalPatientsSearchQueuePatient": {
+    "id": "bahmni.clinical.patients.search.queuePatients",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler":"emrapi.sqlSearch.queuePatients",
+      "translationKey": "MODULE_LABEL_QUEUE_KEY",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+    },
+    "label": "Queue",
+    "order": 4,
     "requiredPrivilege": "app:clinical"
   },
   "observations": {
