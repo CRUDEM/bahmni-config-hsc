@@ -142,5 +142,6 @@
     "EDIT_LABEL": "Edit",
 
     "OBS_ABNORMAL_TRANSLATE_KEY": "Abnormal",
-    "TRIAGE_INFORMATION": "Triage"
+    "TRIAGE_INFORMATION": "Triage",
+    "VITAL_SIGNS": "Vital Signs"
 }

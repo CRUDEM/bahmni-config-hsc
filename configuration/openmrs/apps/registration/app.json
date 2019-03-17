@@ -20,7 +20,7 @@
         "patientInformation": {
             "additionalPatientInformation": {
                 "title": "Additional Patient Information",
-                "attributes": ["impl.insuranceCompany", "impl.policyNumber", "impl.contactPersonName", "impl.contactPersonPhoneNumber", "impl.contactPersonAddress"]
+                "attributes": []
             },
             "hidden": {
                 "attributes": [

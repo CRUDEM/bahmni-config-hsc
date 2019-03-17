@@ -39,6 +39,17 @@
             "conceptName": "HSC_Triage information",
             "translationKey": "TRIAGE_INFORMATION"
         },
+        "order": 2,
+        "requiredPrivilege": "Edit Visits"
+    },
+    "triageSigns":{
+        "id": "bahmni.registration.conceptSetGroup.vitalSigns",
+        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
+        "type": "config",
+        "extensionParams": {
+            "conceptName": "HSC_Vital Signs Form",
+            "translationKey": "VITAL_SIGNS"
+        },
         "order": 1,
         "requiredPrivilege": "Edit Visits"
     }
