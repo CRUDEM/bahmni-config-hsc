@@ -11,11 +11,17 @@ angular.module('bahmni.common.displaycontrol.custom')
 
     this.getAllOrders = function(filters, representation) {
       var patientFilter = {
-        "field": "uuid",
+        "field": "partner_id",
         "comparison": "=",
-        "value": ""
+        "value": "8"
       }
+      // var patientFilter = {
+      //   "field": "partner_uuid",
+      //   "comparison": "=",
+      //   "value": $scope.patient.uuid
+      // }
       // filters.push(patientFilter)
+
       var orders = $http.post(Bahmni.Common.Constants.openmrsUrl + "/ws/rest/v1/erp/order?" + $httpParamSerializer({
         rep: representation
       }), {
@@ -33,10 +39,15 @@ angular.module('bahmni.common.displaycontrol.custom')
 
     this.getAllInvoices = function(filters, representation) {
       var patientFilter = {
-        "field": "uuid",
+        "field": "partner_id",
         "comparison": "=",
-        "value": ""
+        "value": "8"
       }
+      // var patientFilter = {
+      //   "field": "partner_uuid",
+      //   "comparison": "=",
+      //   "value": $scope.patient.uuid
+      // }
       // filters.push(patientFilter)
       var salesInvoiceFilter = {
         "field": "type",
@@ -58,9 +69,8 @@ angular.module('bahmni.common.displaycontrol.custom')
   }]);
 
 angular.module('bahmni.common.displaycontrol.custom')
-  .directive('billingStatus', ['erpService', 'appService', 'spinner', '$q', function(erpService, appService, spinner, $q) {
-    var link = function($scope) {
-
+  .directive('billingStatus', ['erpService', 'orderService', 'appService', 'spinner', '$q', function(erpService, orderService, appService, spinner, $q) {
+    var controller = function($scope) {
       $scope.contentUrl = appService.configBaseUrl() + "/customDisplayControl/views/billingStatus.html";
 
       var lines = [];
@@ -86,15 +96,63 @@ angular.module('bahmni.common.displaycontrol.custom')
 
       var ordersFilters = [];
       var invoicesFilters = [];
+      var orders = [];
+      var invoices = [];
 
-      erpService.getAllOrders(ordersFilters, "full").success(function(orders) {
-        erpService.getAllInvoices(invoicesFilters, "full").success(function(invoices) {
-          setTagsToOrderLines(orders);
-          setTagsToInvoiceLines(invoices);
-          setApprovalStatusToLines();
-          $scope.lines = lines;
-        });
+      var retrieveErpOrders = function() {
+        return erpService.getAllOrders(ordersFilters, "full").then(function(response) {
+          orders = response.data;
+        })
+      }
+
+      var retrieveErpInvoices = function() {
+        return erpService.getAllInvoices(invoicesFilters, "full").then(function(response) {
+          invoices = response.data;
+        })
+      }
+
+      var getOrdersAndInvoices = $q.all([retrieveErpOrders(), retrieveErpInvoices()]);
+      getOrdersAndInvoices.then(function() {
+        setTagsToOrderLines(orders);
+        setTagsToInvoiceLines(invoices);
+        setApprovalStatusToLines();
+        removeRetired();
+        // lines.forEach(function(line) {
+        //   getVisitId(line);
+        // });
       });
+      $scope.initialization = getOrdersAndInvoices;
+
+      // var getVisitId = function(line) {
+      //   if (line.order != null) {
+      //     var customRepresentation = Bahmni.ConceptSet.CustomRepresentationBuilder.build(['encounter_id']);
+      //     orderService.getOrders({
+      //       patientUuid: $scope.patient.uuid,
+      //       orderUuid: line.order,
+      //       includeObs: true,
+      //       v: "custom:" + customRepresentation
+      //     }).success(function(orders) {
+      //       var order = orders;
+      //       $scope.lines = lines;
+      //       $scope.groupedLines = sortAndGroupByDate(lines);
+      //     })
+      //   }
+      // }
+
+      var removeRetired = function() {
+        lines = _.filter(lines, function(o) {
+          return o.retire == false;
+        })
+      }
+
+      var sortAndGroupByDate = function(linesToSort) {
+        return _.groupBy(
+          _.orderBy(linesToSort, ['date'], ['desc']),
+          function(o) {
+            var day = new Date(o.date).setHours(0, 0, 0, 0);
+            return day;
+          })
+      }
 
       var setApprovalStatusToLines = function() {
         lines.forEach(function(line) {
@@ -138,6 +196,7 @@ angular.module('bahmni.common.displaycontrol.custom')
               "id": line.id,
               "date": order.date_order,
               "document": order.name,
+              "order": order.x_external_order_id,
               "tags": tags,
               "displayName": line.display_name
             })
@@ -172,9 +231,15 @@ angular.module('bahmni.common.displaycontrol.custom')
           return invoices;
         });
       };
-    }
+    };
+
+    var link = function($scope, element) {
+      spinner.forPromise($scope.initialization, element);
+    };
+
     return {
       restrict: 'E',
+      controller: controller,
       link: link,
       template: '<ng-include src="contentUrl"/>'
     }

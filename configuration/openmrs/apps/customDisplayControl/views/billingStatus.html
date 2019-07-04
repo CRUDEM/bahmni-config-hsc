@@ -1,3 +1,14 @@
+<style>
+  .approved {
+    border-left: 3px solid green !important
+  }
+  .checked {
+    color: green
+  }
+  .nonApproved {
+    border-left: 3px solid red !important
+  }
+</style>
 <section class="dashboard-section">
   <h2 ng-dialog-class="ngdialog ngdialog-theme-default ng-dialog-all-details-page" ng-dialog-data='{"section": {{section}}, "patient": {{patient}} }' class="section-title">
     <span class="title-link">{{config.translationKey | translate}} </span>
@@ -9,32 +20,32 @@
       <p translate="DISPLAY_CONTROL_ERROR_MESSAGE_KEY" translate-values="{displayControl : '{{config.translationKey | translate}}'}"></p>
     </div>
   </div>
-
-  <table ng-show="lines.length" class="dashboard-table">
-    <tbody>
-      <tr ng-repeat="line in lines | filter:{retire: false } | orderBy: '-date'">
-        <td>
-          <span>
-            {{ line.document }}
+  <section class="block hierarchy">
+    <ul class=form-field>
+      <li ng-repeat="(key,value) in groupedLines">
+        <div class="tree-list-item row-click toggle-container active" toggle="line.show">
+          <i class="fa fa-caret-right"></i>
+          <i class="fa fa-caret-down"></i>
+          <span>{{ key | bahmniDate }}
           </span>
-        </td>
-        <td>
-          <span>
-            {{ line.displayName }}
-          </span>
-        </td>
-        <td>
-          <span>
-            <i class="fa fa-ok" ng-show="line.approved"></i>
-            <i class="fa fa-times-circle" ng-hide="line.approved"></i>
-          </span>
-        </td>
-        <td>
-          <span>
-            {{ line.date | bahmniDate }}
-          </span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+        </div>
+        <table class="repeated-table" ng-show="line.show">
+          <tbody ng-repeat="line in value">
+            <tr ng-class="">
+              <td ng-class="{ approved: line.approved, nonApproved : !line.approved }" style="width:5%">
+                <i class="fa fa-ok checked" ng-show="line.approved"></i>
+                <i class="fa fa-times-circle" ng-hide="line.approved"></i>
+              </td>
+              <td style="with:70%" >
+                {{ line.displayName }}
+              </td>
+              <td style="width:25%">
+                {{ line.document }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </section>
 </section>
