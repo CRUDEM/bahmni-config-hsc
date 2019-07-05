@@ -2,9 +2,11 @@
   .approved {
     border-left: 3px solid green !important
   }
+
   .checked {
     color: green
   }
+
   .nonApproved {
     border-left: 3px solid red !important
   }
@@ -23,20 +25,20 @@
   <section class="block hierarchy">
     <ul class=form-field>
       <li ng-repeat="(key,value) in groupedLines">
-        <div class="tree-list-item row-click toggle-container active" toggle="line.show">
+        <div class="tree-list-item row-click toggle-container active" toggle="section.show">
           <i class="fa fa-caret-right"></i>
           <i class="fa fa-caret-down"></i>
           <span>{{ key | bahmniDate }}
           </span>
         </div>
-        <table class="repeated-table" ng-show="line.show">
+        <table class="repeated-table" ng-show="section.show">
           <tbody ng-repeat="line in value">
             <tr ng-class="">
               <td ng-class="{ approved: line.approved, nonApproved : !line.approved }" style="width:5%">
                 <i class="fa fa-ok checked" ng-show="line.approved"></i>
                 <i class="fa fa-times-circle" ng-hide="line.approved"></i>
               </td>
-              <td style="with:70%" >
+              <td style="with:70%">
                 {{ line.displayName }}
               </td>
               <td style="width:25%">
