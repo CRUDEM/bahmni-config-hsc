@@ -100,16 +100,15 @@ function billingStatusController($scope, $element, erpService, visitService, app
   const approvedConditions = $scope.config.approvedConditions;
   const orderExternalIdFieldName = $scope.config.orderExternalIdFieldName;
 
-  // Temporary filter to work on non-Bahmni Odoo installs.
-  // TODO: replace with '"field": "partner_uuid"' and '"value": $scope.patient.uuid'
   const patientFilter = {
     "field": $scope.config.patientUuidFieldName,
     "comparison": "=",
     "value": $scope.patient.uuid
   }
+
   // Initialize the filters with the patient filter.
-  var invoicesFilters = [];
-  var ordersFilters = [];
+  var invoicesFilters = [patientFilter];
+  var ordersFilters = [patientFilter];
 
   var invoices = [];
   var orders = [];
