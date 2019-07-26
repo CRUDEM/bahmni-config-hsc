@@ -10,6 +10,7 @@
     "MODULE_LABEL_QUEUE_KEY":"Queue",
     "IMPL_BP_PULSE":"BP / Pulse",
     "IMPL_GROWTH_CHART":"Growth Chart",
+    "IMPL_BILLING_STATUS":"Billing Status",
     "DASHBOARD_TITLE_LAB_RESULTS_KEY": "Lab Results",
     "DASHBOARD_TITLE_LAB_ORDERS_DISPLAY_CONTROL_KEY": "Lab Orders Fulfillment",
     "DASHBOARD_TITLE_PACS_KEY": "Pacs",
@@ -36,26 +37,26 @@
     "DASHBOARD_TITLE_WEIGHT_BMI": "Weight/BMI",
     "DASHBOARD_TITLE_DIABETES_BLOOD_SUGAR": "Diabetes/Blood Sugar",
     "DASHBOARD_TITLE_PULSE": "Pulse",
-    
+
     "DASHBOARD_TAB_GENERAL_KEY": "General",
     "DASHBOARD_TAB_TRENDS_KEY": "Trends",
     "DASHBOARD_TAB_PATIENT_SUMMARY_KEY": "Patient Summary",
     "DASHBOARD_TAB_DISCHARGE_SUMMARY_KEY": "Discharge Summary",
     "DASHBOARD_TAB_ORDERS_KEY": "Orders",
-  
+
     "LAB_INVESTIGATIONS_KEY":"Lab Investigations",
     "PACS_ORDERS_VISIT_PAGE_KEY": "Pacs Orders Visit Page",
-  
+
     "DISCHARGE_SUMMARY_DIAGNOSIS_KEY" :"Diagnosis",
-  
+
     "DISCHARGE_SUMMARY_ADVICE_ON_DISCHARGE_KEY": "Advice on Discharge",
     "DISCHARGE_SUMMARY_AT_ADMISSION_KEY": "At Admission",
     "DISCHARGE_SUMMARY_ADMISSION_DETAILS_KEY": "Admission Details",
     "DISCHARGE_SUMMARY_CLINICAL_NOTES_KEY": "Clinical Notes",
     "DISCHARGE_SUMMARY_AT_DISCHARGE_KEY": "At Discharge",
     "DISCHARGE_SUMMARY_TREATMENTS_KEY": "Treatments",
-  
-  
+
+
     "OBSERVATIONS_BOARD_LABEL_KEY":"Observations",
     "MEDICATIONS_BOARD_LABEL_KEY":"Medications",
     "ORDERS_BOARD_LABEL_KEY":"Orders",
@@ -63,10 +64,10 @@
     "CONSULTATION_BOARD_LABEL_KEY":"Consultation",
     "DISPOSITION_BOARD_LABEL_KEY":"Disposition",
     "DIAGNOSIS_BOARD_LABEL_KEY":"Diagnosis",
-  
+
     "CLINICAL_ORDER_RADIOLOGY_NEED_PRINT": "Need Print for this order.",
     "CLINICAL_ORDER_RADIOLOGY_NEED_PRINT_BUTTON": "Needs Print",
-  
+
     "CONSULTATION_PAGE_KEY" :"Consultation",
     "PROGRAM_MANAGEMENT_PAGE_KEY":"Program Management Page",
     "DISCHARGE_SUMMARY_PAGE_KEY":"Discharge Summary Page",
@@ -76,7 +77,7 @@
     "HOME_DASHBOARD_KEY":"Home Dashboard",
     "MEDICATION_CHANGE_DURATION_BUTTON": "Change Duration",
     "DASHBOARD_TITLE_Consultation_KEY": "Consultation Notes",
-  
+
     "DASHBOARD_TITLE_APPOINTMENTS_KEY": "Appointments",
     "DASHBOARD_APPOINTMENTS_SLOT_KEY": "Slot",
     "DASHBOARD_APPOINTMENTS_SERVICE_KEY": "Service",
@@ -90,4 +91,3 @@
     "DASHBOARD_NO_PAST_APPOINTMENTS_KEY": "No past appointments",
     "DASHBOARD_NO_UPCOMING_APPOINTMENTS_KEY": "No upcoming appointments"
   }
-  
