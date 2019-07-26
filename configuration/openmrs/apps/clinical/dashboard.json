@@ -23,6 +23,8 @@
               "retireLinesConditions": [["ORDER", "FULLY_INVOICED"]],
               "nonApprovedConditions": [["ORDER", "NON_INVOICED"],["INVOICE", "OVERDUE", "NOT_PAID"]],
               "approvedConditions": [["INVOICE", "PAID"],["INVOICE", "NOT_OVERDUE"]],
+              "patientUuidFieldName": "partner_uuid",
+              "orderExternalIdFieldName": "external_order_id",
               "showDetailsButton": true,
               "translationKey": "IMPL_BILLING_STATUS",
               "template": "<billing-status></billing-status>"
