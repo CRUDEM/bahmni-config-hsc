@@ -27,15 +27,37 @@ angular.module('bahmni.common.displaycontrol.custom')
 
   .service('erpService', ['$http', '$httpParamSerializer', 'sessionService', function($http, $httpParamSerializer, sessionService) {
 
+    const WS_URI = "/ws/rest/v1"
+
+    const ERP_URI = "/erp"
+
+    const PARTNER_URI = WS_URI + ERP_URI + "/partner"
+    const ORDER_URI =  WS_URI + ERP_URI + "/order"
+    const INVOICE_URI =  WS_URI + ERP_URI + "/invoice"
+
+    this.getPartnerByUuid = function(uuid, uuidFieldName, representation) {
+      var uuidFilter = {
+        "field": uuidFieldName,
+        "comparison": "=",
+        "value": uuid
+      }
+      var partner = $http.post(Bahmni.Common.Constants.openmrsUrl + PARTNER_URI + "?" + $httpParamSerializer({
+        rep: representation
+      }), {
+        filters: [uuidFilter]
+      });
+      return partner;
+    };
+
     this.getOrder = function(id, representation) {
-      var order = $http.get(Bahmni.Common.Constants.openmrsUrl + "/ws/rest/v1/erp/order/" + id + "?" + $httpParamSerializer({
+      var order = $http.get(Bahmni.Common.Constants.openmrsUrl + ORDER_URI + "/" + id + "?" + $httpParamSerializer({
         rep: representation
       }), {});
       return order;
     };
 
     this.getAllOrders = function(filters, representation) {
-      var orders = $http.post(Bahmni.Common.Constants.openmrsUrl + "/ws/rest/v1/erp/order?" + $httpParamSerializer({
+      var orders = $http.post(Bahmni.Common.Constants.openmrsUrl + ORDER_URI + "?" + $httpParamSerializer({
         rep: representation
       }), {
         filters: filters
@@ -44,7 +66,7 @@ angular.module('bahmni.common.displaycontrol.custom')
     };
 
     this.getInvoice = function(id, representation) {
-      var invoice = $http.get(Bahmni.Common.Constants.openmrsUrl + "/ws/rest/v1/erp/invoice/" + id + "?" + $httpParamSerializer({
+      var invoice = $http.get(Bahmni.Common.Constants.openmrsUrl + INVOICE_URI + "/" + id + "?" + $httpParamSerializer({
         rep: representation
       }), {});
       return invoice;
@@ -57,7 +79,7 @@ angular.module('bahmni.common.displaycontrol.custom')
         "value": "out_invoice"
       }
       filters.push(salesInvoiceFilter)
-      var invoices = $http.post(Bahmni.Common.Constants.openmrsUrl + "/ws/rest/v1/erp/invoice?" + $httpParamSerializer({
+      var invoices = $http.post(Bahmni.Common.Constants.openmrsUrl + INVOICE_URI + "?" + $httpParamSerializer({
         rep: representation
       }), {
         filters: filters
@@ -100,20 +122,33 @@ function billingStatusController($scope, $element, erpService, visitService, app
   const approvedConditions = $scope.config.approvedConditions;
   const orderExternalIdFieldName = $scope.config.orderExternalIdFieldName;
 
-  const patientFilter = {
-    "field": $scope.config.patientUuidFieldName,
-    "comparison": "=",
-    "value": $scope.patient.uuid
-  }
-
-  // Initialize the filters with the patient filter.
-  var invoicesFilters = [patientFilter];
-  var ordersFilters = [patientFilter];
-
   var invoices = [];
   var orders = [];
 
+  var invoicesFilters = [];
+  var ordersFilters = [];
+
   var lines = [];
+  $scope.orderToInvoiceMap = {};
+
+  var retrieveErpPartner =  function() {
+      return erpService.getPartnerByUuid($scope.patient.uuid, $scope.config.patientUuidFieldName).then(function(response) {
+        var patientFilter = {
+          "field": "partner_id",
+          "comparison": "=",
+          "value": response.data[0].id
+        }
+        // Initialize the filters with the patient filter.
+        invoicesFilters = [patientFilter];
+        ordersFilters = [patientFilter];
+      })
+  }
+
+  var getErpPartner = function() {
+      return $q.all([retrieveErpPartner()]).then(function() {
+        getOrdersAndInvoices();
+      })
+  }
 
   const erpOrderRepresentation = [
     "order_lines",
@@ -146,27 +181,29 @@ function billingStatusController($scope, $element, erpService, visitService, app
 
   var getOrdersAndInvoices = function() {
     return $q.all([retrieveErpOrders(), retrieveErpInvoices()]).then(function() {
-      setTagsToOrderLines(orders);
-      setTagsToInvoiceLines(invoices);
-      setApprovalStatusToLines();
-      removeRetired();
+      var orderLinesWithTags = setTagsToOrderLines(orders);
+      var invoiceLinesWithTags = setTagsToInvoiceLines(invoices);
+      var linesWithApprovalStatus = setApprovalStatusToLines(orderLinesWithTags.concat(invoiceLinesWithTags));
+      var linesWithApprovalStatusAndRetiredValue = removeRetired(linesWithApprovalStatus);
+      $scope.lines = linesWithApprovalStatusAndRetiredValue;
     });
   }
 
-  var init = $q.all([getOrdersAndInvoices()]);
+  var init = $q.all([getErpPartner()]);
   init.then(function() {
-    $scope.lines = lines;
+    $scope.lines = [];
   })
 
   $scope.initialization = init;
 
-  var removeRetired = function() {
+  var removeRetired = function(lines) {
     lines = _.filter(lines, function(o) {
       return o.retire == false;
     })
+    return lines;
   }
 
-  var setApprovalStatusToLines = function() {
+  var setApprovalStatusToLines = function(lines) {
     lines.forEach(function(line) {
       line.approved = false;
       line.retire = false;
@@ -187,9 +224,11 @@ function billingStatusController($scope, $element, erpService, visitService, app
         }
       })
     })
+    return lines
   };
 
   var setTagsToOrderLines = function(orders) {
+    var orderLinesWithTags = []
     orders.forEach(function(order) {
       order.order_lines.forEach(function(orderLine) {
         // NON INVOICED
@@ -205,7 +244,7 @@ function billingStatusController($scope, $element, erpService, visitService, app
           // FULLY_INVOICED
           tags.push(FULLY_INVOICED);
         }
-        lines.push(new BillingLine(
+        orderLinesWithTags.push(new BillingLine(
           orderLine.id,
           order.date_order,
           null,
@@ -216,9 +255,11 @@ function billingStatusController($scope, $element, erpService, visitService, app
         ))
       })
     })
+    return orderLinesWithTags;
   };
 
   var setTagsToInvoiceLines = function(invoices) {
+    var invoiceLinesWithTags = []
     invoices.forEach(function(invoice) {
       invoice.invoice_lines.forEach(function(invoiceLine) {
         var tags = [];
@@ -228,20 +269,22 @@ function billingStatusController($scope, $element, erpService, visitService, app
         } else {
           tags.push(NOT_PAID);
         }
-        if (new Date(invoice.date_due).getDate() >= new Date().getDate()) {
-          tags.push(OVERDUE);
-        } else {
+        if (invoice.date_due != null && new Date(invoice.date_due).getDate() < new Date().getDate()) {
           tags.push(NOT_OVERDUE);
+        } else {
+          tags.push(OVERDUE);
         }
         var orderUuid = ""
         if (invoiceLine.origin != null) {
           orders.forEach(function(order) {
-            if (order.name == invoiceLine.origin) {
-              orderUuid = order[orderExternalIdFieldName];
-            }
+            order.order_lines.forEach(function(orderLine) {
+              if (!_.isEmpty(orderLine.invoice_lines) && orderLine.invoice_lines.includes(invoiceLine.id)) {
+                orderUuid = orderLine[orderExternalIdFieldName];
+              }
+            })
           })
         };
-        lines.push(new BillingLine(
+        invoiceLinesWithTags.push(new BillingLine(
           invoiceLine.id,
           invoice.date,
           null,
@@ -251,8 +294,8 @@ function billingStatusController($scope, $element, erpService, visitService, app
           invoiceLine.display_name
         ))
       })
-      return invoices;
     });
+    return invoiceLinesWithTags;
   };
 };
 
