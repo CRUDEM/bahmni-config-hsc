@@ -148,7 +148,7 @@
               "yAxisConcepts":[
                   "BMI"
               ],
-              "referenceData":"growthChartReference.csv",
+              "referenceData":"charts/growthChartReference.csv",
               "numberOfVisits":10
           },
           "displayOrder":150
