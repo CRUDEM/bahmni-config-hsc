@@ -163,7 +163,28 @@
             "conceptNames":[
                 "Consultation Note"
             ]
-        }}
+        }},
+        "radiologyOrders":{  
+          "orderType":"Radiology Order",
+          "type":"ordersControl",
+          "translationKey":"DASHBOARD_TITLE_RADIOLOGY_ORDERS_KEY",
+          "displayOrder":80,
+          "dashboardConfig":{  
+              "conceptNames":[  
+                  "Summary"
+              ],
+              "numberOfVisits":5
+          }
+      },
+      "labOrders":{  
+          "translationKey":"DASHBOARD_TITLE_LAB_ORDERS_DISPLAY_CONTROL_KEY",
+          "type":"ordersControl",
+          "orderType":"Lab Order",
+          "showDetailsButton":true,
+          "displayOrder":90,
+          "dashboardConfig":{},
+          "numberOfVisits":5
+      }
     }
   }
 }
