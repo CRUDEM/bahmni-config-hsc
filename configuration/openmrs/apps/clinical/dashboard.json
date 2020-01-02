@@ -186,5 +186,126 @@
           "numberOfVisits":5
       }
     }
+  },
+  "orders":{
+    "translationKey":"DASHBOARD_TAB_ORDERS_KEY",
+    "displayByDefault":false,
+    "maxRecentlyViewedPatients":10,
+    "sections":{
+  "labOrders":{  
+    "translationKey":"DASHBOARD_TITLE_LAB_ORDERS_DISPLAY_CONTROL_KEY",
+    "type":"ordersControl",
+    "orderType":"Lab Order",
+    "showDetailsButton":true,
+    "displayOrder":10,
+    "dashboardConfig":{},
+    "numberOfVisits":5
+  },
+  "radiologyOrders":{  
+    "orderType":"Radiology Order",
+    "type":"ordersControl",
+    "translationKey":"DASHBOARD_TITLE_RADIOLOGY_ORDERS_KEY",
+    "displayOrder":20,
+    "dashboardConfig":{  
+        "conceptNames":[  
+            "Summary"
+        ],
+        "numberOfVisits":5
+      }
+  },
+  "Surgery":{  
+    "translationKey":"DASHBOARD_TITLE_SURGERY_KEY",
+    "type":"ordersControl",
+    "orderType":"Surgery",
+    "showDetailsButton":true,
+    "displayOrder":30,
+    "dashboardConfig":{},
+    "numberOfVisits":5
+  },
+  "ENT":{  
+    "translationKey":"DASHBOARD_TITLE_ENT_KEY",
+    "type":"ordersControl",
+    "orderType":"ENT",
+    "showDetailsButton":true,
+    "displayOrder":40,
+    "dashboardConfig":{},
+    "numberOfVisits":5
+  },
+  "Material":{  
+    "translationKey":"DASHBOARD_TITLE_MATERIAL_KEY",
+    "type":"ordersControl",
+    "orderType":"Material",
+    "showDetailsButton":true,
+    "displayOrder":50,
+    "dashboardConfig":{},
+    "numberOfVisits":5
+  },
+  "Maxillofacial":{  
+    "translationKey":"DASHBOARD_TITLE_MAXILLOFACIAL_KEY",
+    "type":"ordersControl",
+    "orderType":"Maxillofacial",
+    "showDetailsButton":true,
+    "displayOrder":60,
+    "dashboardConfig":{},
+    "numberOfVisits":5
+  },
+"ObstetricsAndGynecology":{  
+  "translationKey":"DASHBOARD_TITLE_OBSTERICS_AND_GYNECOLOGY_KEY",
+  "type":"ordersControl",
+  "orderType":"Obstetrics and Gynecology",
+  "showDetailsButton":true,
+  "displayOrder":60,
+  "dashboardConfig":{},
+  "numberOfVisits":5
+},"Ophtalmology":{  
+  "translationKey":"DASHBOARD_TITLE_OPHTALMOLOGY_KEY",
+  "type":"ordersControl",
+  "orderType":"Ophtalmology",
+  "showDetailsButton":true,
+  "displayOrder":70,
+  "dashboardConfig":{},
+  "numberOfVisits":5
+},"Orthopedics and Traumatology":{  
+  "translationKey":"DASHBOARD_TITLE_ORTHOPEDICS_AND_TRAUMATOLOGY_KEY",
+  "type":"ordersControl",
+  "orderType":"Orthopedics and Traumatology",
+  "showDetailsButton":true,
+  "displayOrder":80,
+  "dashboardConfig":{},
+  "numberOfVisits":5
+},"Procedure":{  
+  "translationKey":"DASHBOARD_TITLE_PROCEDURE_KEY",
+  "type":"ordersControl",
+  "orderType":"Procedure",
+  "showDetailsButton":true,
+  "displayOrder":90,
+  "dashboardConfig":{},
+  "numberOfVisits":5
+},"Urology":{  
+  "translationKey":"DASHBOARD_TITLE_UROLOGY_KEY",
+  "type":"ordersControl",
+  "orderType":"Urology",
+  "showDetailsButton":true,
+  "displayOrder":100,
+  "dashboardConfig":{},
+  "numberOfVisits":5
+},"Wound":{  
+  "translationKey":"DASHBOARD_TITLE_WOUND_KEY",
+  "type":"ordersControl",
+  "orderType":"Wound",
+  "showDetailsButton":true,
+  "displayOrder":110,
+  "dashboardConfig":{},
+  "numberOfVisits":5
+},"Wound Dressing":{  
+  "translationKey":"DASHBOARD_TITLE_WOUND_DRESSING_KEY",
+  "type":"ordersControl",
+  "orderType":"Wound Dressing",
+  "showDetailsButton":true,
+  "displayOrder":120,
+  "dashboardConfig":{},
+  "numberOfVisits":5
+}
+    }
   }
 }
