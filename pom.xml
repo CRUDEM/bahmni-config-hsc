@@ -4,7 +4,7 @@
   <artifactId>bahmni-config-hsc</artifactId>
   <name>HSC Bahmni config</name>
   <description>Bahmni configuration for the HSC distribution</description>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
 
   <developers>
