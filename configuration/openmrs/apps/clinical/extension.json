@@ -114,7 +114,7 @@
     "type": "config",
     "extensionParams": {
       "default": true,
-      "conceptName": "Haiti_Vital Signs Form"
+      "conceptName": "Vital Signs"
     },
     "requiredPrivilege": "app:clinical"
 },

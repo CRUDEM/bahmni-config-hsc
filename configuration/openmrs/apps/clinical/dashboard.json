@@ -73,48 +73,48 @@
           "showDetailsButton": true,
           "scope":"latest",
           "conceptNames":[
-              "Haiti_Pulse Data",
-              "Haiti_Systolic Blood Pressure Data",
-              "Haiti_Diastolic Blood Pressure Data",
-              "Haiti_Temperature Data",
-              "Haiti_Respiratory Rate Data",
-              "Haiti_Oxygen Saturation Data",
+              "Pulse",
+              "Systolic Blood Pressure",
+              "Diastolic Blood Pressure",
+              "Temperature",
+              "Respiratory Rate",
+              "Oxygen Saturation",
               "HSC_Capillary Refill Time Data",
               "Height",
               "Weight",
-              "BMI Data",
-              "BMI Status Data"
+              "BMI",
+              "BMI Status"
           ]
       },
       "expandedViewConfig":{
           "showDetailsButton": true,
           "conceptNames":[
-              "Haiti_Pulse Data",
-              "Haiti_Diastolic Blood Pressure Data",
-              "Haiti_Systolic Blood Pressure Data",
-              "Haiti_Temperature Data",
-              "Haiti_Respiratory Rate Data",
-              "Haiti_Oxygen Saturation Data",
+              "Pulse",
+              "Diastolic Blood Pressure",
+              "Systolic Blood Pressure",
+              "Temperature",
+              "Respiratory Rate",
+              "Oxygen Saturation",
               "HSC_Capillary Refill Time Data",
               "Height",
               "Weight",
-              "BMI Data",
-              "BMI Status Data"
+              "BMI",
+              "BMI Status"
           ],
           "pivotTable":{
               "groupBy":"encounters",
               "obsConcepts":[
-                  "Haiti_Pulse Data",
-                  "Haiti_Diastolic Blood Pressure Data",
-                  "Haiti_Systolic Blood Pressure Data",
-                  "Haiti_Temperature Data",
-                  "Haiti_Respiratory Rate Data",
-                  "Haiti_Oxygen Saturation Data",
+                  "Pulse",
+                  "Diastolic Blood Pressure",
+                  "Systolic Blood Pressure",
+                  "Temperature",
+                  "Respiratory Rate",
+                  "Oxygen Saturation",
                   "HSC_Capillary Refill Time Data",
                   "Height",
                   "Weight",
-                  "BMI Data",
-                  "BMI Status Data"
+                  "BMI",
+                  "BMI Status"
               ],
               "drugConcepts":[
 
@@ -131,9 +131,9 @@
             "translationKey": "IMPL_BP_PULSE",
             "config":{
                 "yAxisConcepts":[
-                    "Haiti_Systolic Blood Pressure",
-                    "Haiti_Diastolic Blood Pressure",
-                    "Haiti_Pulse"
+                    "Systolic Blood Pressure",
+                    "Diastolic Blood Pressure",
+                    "Pulse"
                 ],
                 "xAxisConcept":"observationDateTime",
                 "numberOfVisits":10
