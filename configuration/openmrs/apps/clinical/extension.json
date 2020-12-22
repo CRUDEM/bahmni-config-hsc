@@ -50,19 +50,6 @@
     "order": 3,
     "requiredPrivilege": "app:clinical"
   },
-  "bahmniClinicalPatientsSearchQueuePatient": {
-    "id": "bahmni.clinical.patients.search.queuePatients",
-    "extensionPointId": "org.bahmni.patient.search",
-    "type": "config",
-    "extensionParams": {
-      "searchHandler":"emrapi.sqlSearch.queuePatients",
-      "translationKey": "MODULE_LABEL_QUEUE_KEY",
-      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
-    },
-    "label": "Queue",
-    "order": 4,
-    "requiredPrivilege": "app:clinical"
-  },
   "observations": {
     "id": "bahmni.clinical.consultation.observations",
     "extensionPointId": "org.bahmni.clinical.consultation.board",
