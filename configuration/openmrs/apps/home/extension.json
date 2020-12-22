@@ -28,5 +28,15 @@
     "icon": "icon-bahmni-documents",
     "order": 4,
     "requiredPrivilege": "app:patient-documents"
+  },
+  "implementerInterface": {
+    "id": "bahmni.implementer.interface",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_LABEL_IMPLEMENTER_INTERFACE_KEY",
+    "url": "/implementer-interface",
+    "icon": "fa fa-pencil-square-o",
+    "order": 9,
+    "requiredPrivilege": "app:implementer-interface"
   }
 }
