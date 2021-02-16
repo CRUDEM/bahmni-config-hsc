@@ -97,6 +97,7 @@
   "HOME_DASHBOARD_KEY":"Home Dashboard",
   "MEDICATION_CHANGE_DURATION_BUTTON": "Change Duration",
   "DASHBOARD_TITLE_Consultation_KEY": "Consultation Notes",
+  "MEDICATION_LABEL_START_DATE": "Start Date",
 
   "DASHBOARD_TITLE_APPOINTMENTS_KEY": "Appointments",
   "DASHBOARD_APPOINTMENTS_SLOT_KEY": "Slot",
