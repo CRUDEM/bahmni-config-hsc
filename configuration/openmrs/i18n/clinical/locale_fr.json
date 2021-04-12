@@ -391,5 +391,14 @@
   "VISIT_TITLE_PATIENT_INFORMATION": "Informations patient",
   "VISIT_TITLE_RADIOLOGY_KEY": "Radiologie",
   "VISIT_TITLE_TREATMENTS_KEY": "Médicaments",
-  "YEARS_LABEL": "An(s)"
+  "YEARS_LABEL": "An(s)",
+  
+  "VACCINATIONS": "Vaccinations",
+  "RECENT_VACCINATIONS":"Vaccination récentes",
+  "VACCINE": "Vaccin",
+  "SEQUENCE_NUMBER": "Numéro de séquence",
+  "DATE_GIVEN": "Date de vaccination",
+  "VACCINE_MANUFACTURER":"Fabricant de vaccins",
+  "VACCINE_LOT_NUMBER":"Numéro de lot du vaccin",
+  "VACCINE_LOT_EXPIRATION_DATE":"Date d'expiration du lot de vaccins"
 }

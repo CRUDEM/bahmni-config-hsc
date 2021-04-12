@@ -30,7 +30,7 @@
               "template": "<billing-status></billing-status>"
           }
         },
-      "diagnosis":{
+        "diagnosis":{
         "translationKey":"DASHBOARD_TITLE_DIAGNOSIS_KEY",
         "type":"diagnosis",
         "showDetailsButton": true,
@@ -38,6 +38,19 @@
         "showOrder":true,
         "displayOrder":15
       },
+      "vaccinations": {
+        "type": "custom",
+        "displayOrder": 21,
+        "showDetailsButton": true,
+        "config": {
+            "showDetailsButton": true,
+            "translationKey": "RECENT_VACCINATIONS",
+            "template": "<vaccination></vaccination>",
+            "vaccinationSets":[
+                "Vaccination History"
+            ]
+        }
+    },
       "conditions": {
         "translationKey":"CONDITION_LIST_DISPLAY_CONTROL_TITLE",
         "type": "conditionsList",
