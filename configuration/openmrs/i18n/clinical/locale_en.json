@@ -87,6 +87,7 @@
 
   "CLINICAL_ORDER_RADIOLOGY_NEED_PRINT": "Need Print for this order.",
   "CLINICAL_ORDER_RADIOLOGY_NEED_PRINT_BUTTON": "Needs Print",
+  "CLINICAL_ACCEPT": "Validate",
 
   "CONSULTATION_PAGE_KEY" :"Consultation",
   "PROGRAM_MANAGEMENT_PAGE_KEY":"Program Management Page",
@@ -109,5 +110,7 @@
   "DASHBOARD_UPCOMING_APPOINTMENTS_KEY": "Upcoming Appointments",
   "DASHBOARD_UPCOMING_APPOINTMENTS_KEY_LINK": "List View",
   "DASHBOARD_NO_PAST_APPOINTMENTS_KEY": "No past appointments",
-  "DASHBOARD_NO_UPCOMING_APPOINTMENTS_KEY": "No upcoming appointments"
+  "DASHBOARD_NO_UPCOMING_APPOINTMENTS_KEY": "No upcoming appointments",
+
+  "CONSULTATION_PAD_EMPTY_MESSAGE":"No consultation Notes"
 }
