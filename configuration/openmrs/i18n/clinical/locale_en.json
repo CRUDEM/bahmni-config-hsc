@@ -112,5 +112,6 @@
   "DASHBOARD_NO_PAST_APPOINTMENTS_KEY": "No past appointments",
   "DASHBOARD_NO_UPCOMING_APPOINTMENTS_KEY": "No upcoming appointments",
 
-  "CONSULTATION_PAD_EMPTY_MESSAGE":"No consultation Notes"
+  "CONSULTATION_PAD_EMPTY_MESSAGE":"No consultation Notes",
+  "MEDICATION_LABEL_START_DATE": "Start Date"
 }
