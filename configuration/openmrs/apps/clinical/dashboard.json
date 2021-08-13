@@ -15,7 +15,7 @@
           "groupByVisits": true
         }
       },
-      "customControl": {
+      "billing": {
         "type": "custom",
         "displayOrder": 1,
         "showDetailsButton": true,
