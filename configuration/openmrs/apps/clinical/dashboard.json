@@ -43,48 +43,54 @@
         "displayOrder": 3,
         "dashboardConfig": {
           "showDetailsButton": true,
-          "scope": "latest",
+          "numberOfVisits": 2,
           "conceptNames": [
             "Échelle de Douleur",
             "Pouls",
             "Température",
             "Frequence respiratoire",
             "Saturation d'oxygène",
-            "Groupe tension artérielle",
-            "Taille",
-            "Poids",
-            "BMI",
-            "BMI STATUS"
+            "Groupe tension artérielle"
           ]
         },
         "expandedViewConfig": {
           "showDetailsButton": true,
+          "numberOfVisits": 6,
           "conceptNames": [
             "Échelle de Douleur",
             "Pouls",
             "Température",
             "Frequence respiratoire",
             "Saturation d'oxygène",
-            "Groupe tension artérielle",
-            "Taille",
-            "Poids",
-            "BMI",
-            "BMI STATUS"
+            "Groupe tension artérielle"
           ],
           "pivotTable": {
             "groupBy": "encounters",
-            "obsConcepts": [
-              "Échelle de Douleur",
-              "Pouls",
-              "Température",
-              "Frequence respiratoire",
-              "Saturation d'oxygène",
-              "Groupe tension artérielle",
-              "Taille",
-              "Poids",
-              "BMI",
-              "BMI STATUS"
-            ],
+            "obsConcepts": [],
+            "drugConcepts": [],
+            "labConcepts": []
+          }
+        }
+      },
+
+      "anthropometric": {
+        "translationKey": "DASHBOARD_TITLE_ANTHROPOMETRIC_KEY",
+        "type": "vitals",
+        "isObservation": true,
+        "displayOrder": 3,
+        "dashboardConfig": {
+          "showDetailsButton": true,
+          "scope": "latest",
+          "numberOfVisits": 2,
+          "conceptNames": ["Taille", "Poids", "BMI", "BMI STATUS"]
+        },
+        "expandedViewConfig": {
+          "showDetailsButton": true,
+          "numberOfVisits": 6,
+          "conceptNames": ["Taille", "Poids", "BMI", "BMI STATUS"],
+          "pivotTable": {
+            "groupBy": "encounters",
+            "obsConcepts": ["Taille", "Poids", "BMI", "BMI STATUS"],
             "drugConcepts": [],
             "labConcepts": []
           }
@@ -106,12 +112,11 @@
         "dashboardConfig": {
           "conceptNames": ["Allergies"],
           "showDetailsButton": true,
-          "numberOfVisits": 3
+          "numberOfVisits": 2
         },
         "expandedViewConfig": {
           "conceptNames": ["Allergies"],
-          "numberOfVisits": 3,
-          "scope": "latest",
+          "numberOfVisits": 6,
           "showDetailsButton": true,
           "pivotTable": {}
         }
@@ -133,11 +138,10 @@
         },
         "expandedViewConfig": {
           "numberOfVisits": 6,
-          "scope": "latest",
           "showDetailsButton": true,
           "pivotTable": {},
           "conceptNames": [
-            "Motif de consultation",
+            "Motif de consultation data",
             "Ensemble général",
             "Ensemble de peau",
             "Tête set",
@@ -156,6 +160,7 @@
           ]
         }
       },
+
       "treatments": {
         "translationKey": "DASHBOARD_TITLE_TREATMENTS_KEY",
         "type": "treatment",
@@ -164,12 +169,13 @@
           "showDetailsButton": true,
           "showRoute": true,
           "showDrugForm": true,
-          "numberOfVisits": 5,
+          "numberOfVisits": 2,
           "showOtherActive": true
         },
         "expandedViewConfig": {
           "showDetailsButton": true,
           "translationKey": "DASHBOARD_TITLE_TREATMENTS_KEY",
+          "numberOfVisits": 6,
           "showFlowSheet": true,
           "showListView": true,
           "showRoute": true,
@@ -182,49 +188,104 @@
         "displayOrder": 9,
         "showDetailsButton": true,
         "config": {
+          "numberOfVisits": 3,
           "showDetailsButton": true,
           "translationKey": "RECENT_VACCINATIONS",
           "template": "<vaccination></vaccination>",
           "vaccinationSets": ["Historique vaccinal"]
         }
       },
-      
+
       "lifeStyle": {
         "translationKey": "DASHBOARD_TITLE_LIFE_STYLE_KEY",
         "type": "vitals",
         "isObservation": true,
         "displayOrder": 10,
         "dashboardConfig": {
-          "conceptNames": ["Consommation de tabac", "Consommation d'alcool"],
+          "conceptNames": ["Score CAGE", "Pack Années"],
           "showDetailsButton": true,
-          "numberOfVisits": 3
+          "numberOfVisits": 2
         },
         "expandedViewConfig": {
-          "conceptNames": [
-            "Ensemble de consommation d'alcool",
-            "Ensemble d'histoire du tabac"
-          ],
-          "numberOfVisits": 3,
-          "scope": "latest",
+          "conceptNames": ["Style de Vle"],
+          "numberOfVisits": 6,
           "showDetailsButton": true,
           "pivotTable": {}
         }
       },
-     
+
       "ANC": {
         "translationKey": "DASHBOARD_TITLE_ANC_VALUES_KEY",
         "type": "vitals",
         "isObservation": true,
         "displayOrder": 11,
         "dashboardConfig": {
-          "conceptNames": ["Première visite", "Age gestationnel estimé"],
+          "conceptNames": [
+            "Numéro de la visite",
+            "Age gestationnel estimé",
+            "Nombre total de grossesses (gravidité)",
+            "Nombre de grossesses à terme",
+            "Nombre d’avortements",
+            "Date des dernières règles",
+            "Estimated date of delivery"
+          ],
           "showDetailsButton": true,
-          "numberOfVisits": 3
+          "numberOfVisits": 2
         },
         "expandedViewConfig": {
-          "conceptNames": ["Première visite", "Age gestationnel estimé"],
+          "conceptNames": [
+            "Numéro de la visite",
+            "Age gestationnel estimé",
+            "Nombre total de grossesses (gravidité)",
+            "Nombre de grossesses à terme",
+            "Nombre de naissances vivantes",
+            "Nombre d'enfants vivants",
+            "Nombre d’avortements",
+            "Date des dernières règles",
+            "Estimated date of delivery",
+            "Issue de l'accouchement précédent",
+            "Date du dernier accouchement",
+            "Détails des complications du dernier accouchement",
+            "Risques de grossesse",
+            "Symptômes set",
+            "Hauteur utérine",
+            "Détails du fœtus",
+            "Notes de l'examen physique"
+          ],
           "numberOfVisits": 6,
-          "scope": "latest",
+          "showDetailsButton": true,
+          "pivotTable": {}
+        }
+      },
+      "Gynaecology": {
+        "translationKey": "DASHBOARD_TITLE_GYNAECOLOGY_VALUES_KEY",
+        "type": "vitals",
+        "isObservation": true,
+        "displayOrder": 11,
+        "dashboardConfig": {
+          "conceptNames": [
+            "Âge à la ménarche",
+            "Date des dernières règles",
+            "Nombre total de grossesses (gravidité)",
+            "Nombre d’avortements",
+            "Nombre de grossesses à terme",
+            "Plainte de gynéco",
+            "Contraception"
+          ],
+          "showDetailsButton": false,
+          "numberOfVisits": 2
+        },
+        "expandedViewConfig": {
+          "conceptNames": [
+            "Âge à la ménarche",
+            "Date des dernières règles",
+            "Nombre total de grossesses (gravidité)",
+            "Nombre d’avortements",
+            "Nombre de grossesses à terme",
+            "Ensemble de plaintes gynécologiques",
+            "Ensemble d'historique de contraception"
+          ],
+          "numberOfVisits": 6,
           "showDetailsButton": true,
           "pivotTable": {}
         }
@@ -235,110 +296,90 @@
         "displayOrder": 12,
         "dashboardConfig": {
           "showDetailsButton": false,
-          "scope": "latest",
           "conceptNames": ["Consultation Note"]
-        }
-      },
-     
-      "labOrders": {
-        "translationKey": "DASHBOARD_TITLE_LAB_ORDERS_DISPLAY_CONTROL_KEY",
-        "type": "ordersControl",
-        "orderType": "Lab Order",
-        "showDetailsButton": true,
-        "displayOrder": 13,
-        "dashboardConfig": {},
-        "numberOfVisits": 5
-      },
-      "radiologyOrders": {
-        "orderType": "Radiology Order",
-        "type": "ordersControl",
-        "translationKey": "DASHBOARD_TITLE_RADIOLOGY_ORDERS_KEY",
-        "displayOrder": 14,
-        "dashboardConfig": {
-          "conceptNames": ["Radiology Orders"],
-          "numberOfVisits": 5
         }
       }
     }
   },
-  "trends":{
-    "translationKey":"DASHBOARD_TAB_TRENDS_KEY",
-    "displayByDefault":true,
-    "maxRecentlyViewedPatients":10,
+  "trends": {
+    "translationKey": "DASHBOARD_TAB_TRENDS_KEY",
+    "displayByDefault": true,
+    "maxRecentlyViewedPatients": 10,
     "printing": {
-        "title": "Haiti",
-        "header": "Tendances",
-        "logo": "/bahmni_config/openmrs/apps/home/Haiti_logo.png",
-        "showNameAndImage": true
+      "title": "Haiti",
+      "header": "Tendances",
+      "logo": "/bahmni_config/openmrs/apps/home/Haiti_logo.png",
+      "showNameAndImage": true
     },
-    "sections":{
-        "heightForAgeChart":{
-            "type":"observationGraph",
-            "translationKey": "DASHBOARD_TITLE_HEIGHT_AGE_KEY",
-            "config":{
-                "yAxisConcepts":[
-                    "Taille"
-                ],
-                "referenceData":"charts/heightForAge.csv",
-                "numberOfVisits":20
-            },
-            "displayOrder":30
+    "sections": {
+      "heightForAgeChart": {
+        "type": "observationGraph",
+        "translationKey": "DASHBOARD_TITLE_HEIGHT_AGE_KEY",
+        "config": {
+          "yAxisConcepts": ["Taille"],
+          "referenceData": "charts/heightForAge.csv",
+          "numberOfVisits": 20
         },
-        "weightForAgeChart":{
-            "type":"observationGraph",
-            "translationKey": "DASHBOARD_TITLE_WEIGHT_AGE_KEY",
-            "config":{
-                "yAxisConcepts":[
-                    "Poids"
-                ],
-                "referenceData":"charts/weightForAge.csv",
-                "numberOfVisits":20
-            },
-            "displayOrder":32
+        "displayOrder": 30
+      },
+      "weightForAgeChart": {
+        "type": "observationGraph",
+        "translationKey": "DASHBOARD_TITLE_WEIGHT_AGE_KEY",
+        "config": {
+          "yAxisConcepts": ["Poids"],
+          "referenceData": "charts/weightForAge.csv",
+          "numberOfVisits": 20
         },
-        "BP":{
-            "type":"observationGraph",
-            "translationKey": "DASHBOARD_TITLE_BLOOD_PRESSURE",
-            "config":{
-                "yAxisConcepts":[
-                    "Tension artérielle systolique",
-                    "Tension artérielle diastolique"
-                ],
-                "xAxisConcept":"observationDateTime",
-                "numberOfVisits":10
-            },
-            "displayOrder":2
+        "displayOrder": 32
+      },
+      "BP": {
+        "type": "observationGraph",
+        "translationKey": "DASHBOARD_TITLE_BLOOD_PRESSURE",
+        "config": {
+          "yAxisConcepts": [
+            "Tension artérielle systolique",
+            "Tension artérielle diastolique"
+          ],
+          "xAxisConcept": "observationDateTime",
+          "numberOfVisits": 10
         },
-        "weight/BMI":{
-            "type":"observationGraph",
-            "translationKey": "DASHBOARD_TITLE_WEIGHT_BMI",
-            "config":{
-                "yAxisConcepts":[
-                    "Poids",
-                    "BMI"
-                ],
-                "xAxisConcept": "observationDateTime",
-                "numberOfVisits": 10
-            },
-            "displayOrder":3
+        "displayOrder": 2
+      },
+      "weight": {
+        "type": "observationGraph",
+        "translationKey": "DASHBOARD_TITLE_WEIGHT",
+        "config": {
+          "yAxisConcepts": ["Poids"],
+          "xAxisConcept": "observationDateTime",
+          "numberOfVisits": 10
         },
-        "observationGraph":{
-            "type":"observationGraph",
-            "translationKey": "DASHBOARD_TITLE_PULSE",
-            "config":{
-                "yAxisConcepts":[
-                    "Pouls"
-                ],
-                "xAxisConcept":"observationDateTime",
-                "numberOfVisits":10
-            },
-            "displayOrder":5
-        }
+        "displayOrder": 3
+      },
+      "BMI": {
+        "type": "observationGraph",
+        "translationKey": "DASHBOARD_TITLE_BMI",
+        "config": {
+          "yAxisConcepts": ["BMI"],
+          "xAxisConcept": "observationDateTime",
+          "numberOfVisits": 10
+        },
+        "displayOrder": 4
+      },
+      "observationGraph": {
+        "type": "observationGraph",
+        "translationKey": "DASHBOARD_TITLE_PULSE",
+        "config": {
+          "yAxisConcepts": ["Pouls"],
+          "xAxisConcept": "observationDateTime",
+          "numberOfVisits": 10
+        },
+        "displayOrder": 5
+      }
     }
-},
+  },
   "orders": {
     "translationKey": "DASHBOARD_TAB_ORDERS_KEY",
-    "displayByDefault": false,
+    "displayByDefault": true,
     "maxRecentlyViewedPatients": 10,
     "sections": {
       "labOrders": {
