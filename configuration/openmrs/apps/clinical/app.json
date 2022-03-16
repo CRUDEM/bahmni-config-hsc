@@ -26,6 +26,7 @@
         "hideConditions": false,
         "enableRadiologyOrderOptions":["Urgent","NeedsPrint"],
         "enableLabOrderOptions":["Urgent", "NeedsPrint"],
+        "visitTypeForRetrospectiveEntries": "Général",
         "quickPrints":false,
         "networkConnectivity" : {
             "showNetworkStatusMessage": false,
