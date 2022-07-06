@@ -1,15 +1,21 @@
 {
-    "visitReport": {
-      "name": "Visit Report",
-      "type": "visits",
-      "requiredPrivilege": "app:reports",
-      "config": {
-        "forDataAnalysis": true,
-        "patientAttributes": ["education", "occupation", "primaryContact"],
-        "visitAttributes": ["Visit Status", "Admission Status"],
-        "patientAddresses": ["address2"],
-        "applyDateRangeFor": "visitStopDate",
-        "visitTypesToFilter": ["Primary Care"]
-      }
+  "visitReport": {
+    "name": "Visit Report",
+    "type": "visits",
+    "requiredPrivilege": "app:reports",
+    "config": {
+      "forDataAnalysis": true,
+      "patientAttributes": [
+        "impl.religion",
+        "impl.occupation",
+        "impl.contactPersonName",
+        "impl.contactPersonPhoneNumber"
+      ],
+      "patientAddresses": [
+        "city_village",
+        "address2"
+      ],
+      "excludeColumns" : ["Date Of Admission",	"Date Of Discharge", "Patient Id",	"Visit Id"]
     }
   }
+}
