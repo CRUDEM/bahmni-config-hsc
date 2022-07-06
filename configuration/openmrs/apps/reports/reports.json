@@ -1,0 +1,21 @@
+{
+  "visitReport": {
+    "name": "Visit Report",
+    "type": "visits",
+    "requiredPrivilege": "app:reports",
+    "config": {
+      "forDataAnalysis": true,
+      "patientAttributes": [
+        "impl.religion",
+        "impl.occupation",
+        "impl.contactPersonName",
+        "impl.contactPersonPhoneNumber"
+      ],
+      "patientAddresses": [
+        "city_village",
+        "address2"
+      ],
+      "excludeColumns" : ["Date Of Admission",	"Date Of Discharge", "Patient Id",	"Visit Id"]
+    }
+  }
+}
