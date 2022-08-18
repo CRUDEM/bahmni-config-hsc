@@ -20,7 +20,7 @@
         "displayOrder": 2,
         "showDetailsButton": true,
         "config": {
-          "retireLinesConditions": [["ORDER", "FULLY_INVOICED"]],
+          "retireLinesConditions": [["CANCELLED"],["ORDER", "FULLY_INVOICED"]],
           "nonApprovedConditions": [
             ["ORDER", "NON_INVOICED"],
             ["INVOICE", "OVERDUE", "NOT_PAID"]
