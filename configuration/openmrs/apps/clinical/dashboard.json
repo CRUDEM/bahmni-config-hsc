@@ -4,6 +4,15 @@
     "displayByDefault": true,
     "maxRecentlyViewedPatients": 10,
     "sections": {
+      "navigationLinksControl": {
+        "title":"Navigation Links Control",
+        "translationKey": "DASHBOARD_TITLE_NAVIGATION_LINKS_CONTROL_KEY",
+        "type": "navigationLinksControl",
+        "displayOrder": 0,
+        "showLinks" : ["visitAttribute"],
+        "customLinks": [
+        ]
+      },      
       "visits": {
         "translationKey": "DASHBOARD_TITLE_VISITS_KEY",
         "type": "visits",
