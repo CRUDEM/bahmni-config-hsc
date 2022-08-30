@@ -137,8 +137,8 @@
   "extensionPointId": "org.bahmni.patient.search",
   "type": "config",
   "extensionParams": {
-    "searchHandler":"emrapi.sqlSearch.hsc.Anemie Falciforme",
-    "translationKey": "MODULE_LABEL_ANEMIE FALCIFORME_KEY",
+    "searchHandler":"emrapi.sqlSearch.hsc.Anemie.Falciforme",
+    "translationKey": "MODULE_LABEL_ANEMIE_FALCIFORME_KEY",
     "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
   },
   "label": "Anemie Falciforme",
@@ -163,11 +163,11 @@
   "extensionPointId": "org.bahmni.patient.search",
   "type": "config",
   "extensionParams": {
-    "searchHandler":"emrapi.sqlSearch.hsc.Consultation Générale",
-    "translationKey": "MODULE_LABEL_CONSULTATION GENERALE_KEY",
+    "searchHandler":"emrapi.sqlSearch.hsc.Générale",
+    "translationKey": "MODULE_LABEL_CONSULTATION_GENERALE_KEY",
     "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
   },
-  "label": "Consultation Générale",
+  "label": "Générale",
   "order": 2,
   "requiredPrivilege": "app:clinical"
 },
@@ -211,12 +211,12 @@
   "requiredPrivilege": "app:clinical"
 },
 "bahmniClinicalPatientsSearchMaxillo Faciale": {
-  "id": "bahmni.clinical.patients.search.maxillo facialePatients",
+  "id": "bahmni.clinical.patients.search.maxilloFacialePatients",
   "extensionPointId": "org.bahmni.patient.search",
   "type": "config",
   "extensionParams": {
-    "searchHandler":"emrapi.sqlSearch.hsc.Maxillo Faciale",
-    "translationKey": "MODULE_LABEL_MAXILLO FACIALE_KEY",
+    "searchHandler":"emrapi.sqlSearch.hsc.MaxilloFaciale",
+    "translationKey": "MODULE_LABEL_MAXILLO_FACIALE_KEY",
     "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
   },
   "label": "Maxillo Faciale",
@@ -250,12 +250,12 @@
   "requiredPrivilege": "app:clinical"
 },
 "bahmniClinicalPatientsSearchOrthèse et Prothèse": {
-  "id": "bahmni.clinical.patients.search.orthèse et prothèsePatients",
+  "id": "bahmni.clinical.patients.search.orthèseetprothèsePatients",
   "extensionPointId": "org.bahmni.patient.search",
   "type": "config",
   "extensionParams": {
-    "searchHandler":"emrapi.sqlSearch.hsc.Orthèse et Prothèse",
-    "translationKey": "MODULE_LABEL_ORTHESE ET PROTHESE_KEY",
+    "searchHandler":"emrapi.sqlSearch.hsc.OrthèseetProthèse",
+    "translationKey": "MODULE_LABEL_ORTHESE_ET_PROTHESE_KEY",
     "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
   },
   "label": "Cardiology",
@@ -307,7 +307,7 @@
   "type": "config",
   "extensionParams": {
     "searchHandler":"emrapi.sqlSearch.hsc.Pré-natale",
-    "translationKey": "MODULE_LABEL_PRE-NATALE_KEY",
+    "translationKey": "MODULE_LABEL_PRE_NATALE_KEY",
     "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
   },
   "label": "Pré-natale",
@@ -332,8 +332,8 @@
   "extensionPointId": "org.bahmni.patient.search",
   "type": "config",
   "extensionParams": {
-    "searchHandler":"emrapi.sqlSearch.hsc.Tuberculose (TB)",
-    "translationKey": "MODULE_LABEL_TUBERCULOSE (TB)_KEY",
+    "searchHandler":"emrapi.sqlSearch.hsc.Tuberculose",
+    "translationKey": "MODULE_LABEL_TUBERCULOSE_KEY",
     "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
   },
   "label": "Tuberculose (TB)",
