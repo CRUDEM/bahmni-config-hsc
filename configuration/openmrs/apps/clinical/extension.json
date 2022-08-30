@@ -118,5 +118,291 @@
     "icon": "fa-user-md",
     "order": 7,
     "requiredPrivilege": "app:clinical:treatmentTab"
+},
+"bahmniClinicalPatientsSearchCardiology": {
+  "id": "bahmni.clinical.patients.search.cardiologyPatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Cardiologie",
+    "translationKey": "MODULE_LABEL_CARDIOLOGIE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Cardiology",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchAnemie Falciforme": {
+  "id": "bahmni.clinical.patients.search.anemiefalciformePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Anemie.Falciforme",
+    "translationKey": "MODULE_LABEL_ANEMIE_FALCIFORME_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Anemie Falciforme",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchChirurgie": {
+  "id": "bahmni.clinical.patients.search.chirurgiePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Chirurgie",
+    "translationKey": "MODULE_LABEL_CHIRURGIE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Chirurgie",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchConsultation Générale": {
+  "id": "bahmni.clinical.patients.search.consultationgénéralePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Générale",
+    "translationKey": "MODULE_LABEL_CONSULTATION_GENERALE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Générale",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchDermatologie": {
+  "id": "bahmni.clinical.patients.search.dermatologiePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Dermatologie",
+    "translationKey": "MODULE_LABEL_DERMATOLOGIE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Dermatologie",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchDiabète": {
+  "id": "bahmni.clinical.patients.search.diabètePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Diabète",
+    "translationKey": "MODULE_LABEL_DIABETE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Diabète",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchGynecologie": {
+  "id": "bahmni.clinical.patients.search.gynecologiePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Gynecologie",
+    "translationKey": "MODULE_LABEL_GYNECOLOGIE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Gynecologie",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchMaxillo Faciale": {
+  "id": "bahmni.clinical.patients.search.maxilloFacialePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.MaxilloFaciale",
+    "translationKey": "MODULE_LABEL_MAXILLO_FACIALE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Maxillo Faciale",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchOdontologie": {
+  "id": "bahmni.clinical.patients.search.odontologiePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Odontologie",
+    "translationKey": "MODULE_LABEL_ODONTOLOGIE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Odontologie",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchORL": {
+  "id": "bahmni.clinical.patients.search.ORLPatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.ORL",
+    "translationKey": "MODULE_LABEL_ORL_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "ORL",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchOrthèse et Prothèse": {
+  "id": "bahmni.clinical.patients.search.orthèseetprothèsePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.OrthèseetProthèse",
+    "translationKey": "MODULE_LABEL_ORTHESE_ET_PROTHESE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Cardiology",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchOrthopédie": {
+  "id": "bahmni.clinical.patients.search.orthopédiePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Orthopédie",
+    "translationKey": "MODULE_LABEL_ORTHOPEDIE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Orthopédie",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchPediatrie": {
+  "id": "bahmni.clinical.patients.search.pediatriePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Pediatrie",
+    "translationKey": "MODULE_LABEL_PEDIATRIE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Pediatrie",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchPhysiotherapie": {
+  "id": "bahmni.clinical.patients.search.physiotherapiePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Physiotherapie",
+    "translationKey": "MODULE_LABEL_PHYSIONTHERAPIE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Physiotherapie",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchPré-natale": {
+  "id": "bahmni.clinical.patients.search.pré-natalePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Pré-natale",
+    "translationKey": "MODULE_LABEL_PRE_NATALE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Pré-natale",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchPsychiatrie": {
+  "id": "bahmni.clinical.patients.search.psychiatriePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Psychiatrie",
+    "translationKey": "MODULE_LABEL_PSYCHIATRIE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Psychiatrie",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchTuberculose (TB)": {
+  "id": "bahmni.clinical.patients.search.tuberculose(TB)Patients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Tuberculose",
+    "translationKey": "MODULE_LABEL_TUBERCULOSE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Tuberculose (TB)",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchUrgences": {
+  "id": "bahmni.clinical.patients.search.urgencesPatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Urgences",
+    "translationKey": "MODULE_LABEL_URGENCES_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Urgences",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchUrologie": {
+  "id": "bahmni.clinical.patients.search.urologiePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Urologie",
+    "translationKey": "MODULE_LABEL_UROLOGIE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Urologie",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchVIH": {
+  "id": "bahmni.clinical.patients.search.VIHPatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.VIH",
+    "translationKey": "MODULE_LABEL_VIH_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "VIH",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchOphtalmologie": {
+  "id": "bahmni.clinical.patients.search.ophtalmologiePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Ophtalmologie",
+    "translationKey": "MODULE_LABEL_OPHTALMOLOGIE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Ophtalmologie",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
+"bahmniClinicalPatientsSearchVaccination": {
+  "id": "bahmni.clinical.patients.search.vaccinationPatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler":"emrapi.sqlSearch.hsc.Vaccination",
+    "translationKey": "MODULE_LABEL_VACCINATION_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Vaccination",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
 }
 }
