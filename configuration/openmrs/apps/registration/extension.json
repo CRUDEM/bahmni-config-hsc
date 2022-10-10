@@ -49,7 +49,7 @@
         "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
         "type": "forms",
         "extensionParams": {
-            "formName": "Admission",
+            "formName": "Intake",
             "conceptNames": ["Vital Signs","Glucose"],
             "required":true,
             "showLatest": true
