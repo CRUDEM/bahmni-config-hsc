@@ -44,12 +44,12 @@
         "order": 2,
         "requiredPrivilege": "Edit Visits"
     },
-    "Intake":{
+    "Admission":{
         "id": "bahmni.registration.conceptSetGroup.Intake",
         "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
         "type": "forms",
         "extensionParams": {
-            "formName": "Intake",
+            "formName": "Admission",
             "conceptNames": ["Vital Signs","Glucose"],
             "required":true,
             "showLatest": true
