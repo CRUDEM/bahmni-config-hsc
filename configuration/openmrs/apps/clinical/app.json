@@ -25,6 +25,7 @@
     "config": {
         "hideConditions": false,
         "enableRadiologyOrderOptions":["Urgent","NeedsPrint"],
+        "conceptName": "Poids",
         "enableLabOrderOptions":["Urgent", "NeedsPrint"],
         "visitTypeForRetrospectiveEntries": "Général",
         "quickPrints":false,
