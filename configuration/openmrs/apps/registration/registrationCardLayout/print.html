@@ -11,7 +11,7 @@
             jsbarcode-displayValue="true"
             jsbarcode-textAlign="center"
             jsbarcode-textMargin="0"
-            jsbarcode-fontSize="18"
+            jsbarcode-fontSize="22.5"
        /> </div>
     </p>
 </div>
@@ -19,7 +19,7 @@
 <div style="width:90%; text-align: left; left: 2%;" >
     <hr style="width: 100%; position: relative; align-content: center; left: 5%;">
     <p style="text-align:left; font-size: 24px; line-height: 120%; padding-left: 10px">
-        <strong>CIN/NIF:</strong><span ng-if="patient.extraIdentifiers[0].registrationNumber">{{patient.extraIdentifiers[0].registrationNumber}} </span><span ng-if="patient.extraIdentifiers[1].registrationNumber"> / {{patient.extraIdentifiers[1].registrationNumber}} </span><br>
+        <strong>CIN/NIF:</strong><span ng-if="patient.extraIdentifiers[1].registrationNumber">{{patient.extraIdentifiers[1].registrationNumber}} </span><span ng-if="patient.extraIdentifiers[2].registrationNumber"> / {{patient.extraIdentifiers[2].registrationNumber}} </span><br>
         <strong>Nom:</strong> {{patient.familyName}}<br>
         <strong>Prénom:</strong> {{patient.givenName}}<br>
         <strong>Date de naissance:</strong> {{patient.birthdate | date: 'dd-MM-yyyy'}} <span style="float:right; right: 20px;"> <strong>Sexe:</strong> {{patient.gender}}</span><br>
