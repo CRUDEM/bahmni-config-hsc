@@ -327,6 +327,19 @@
   "order": 2,
   "requiredPrivilege": "app:clinical"
 },
+"bahmniClinicalPatientsSearchMédecine Interne": {
+  "id": "bahmni.clinical.patients.search.médecineInternePatients",
+  "extensionPointId": "org.bahmni.patient.search",
+  "type": "config",
+  "extensionParams": {
+    "searchHandler": "emrapi.sqlSearch.hsc.Médecine Interne",
+    "translationKey": "MODULE_LABEL_INTERNAL_MEDICINE_KEY",
+    "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+  },
+  "label": "Médecine Interne",
+  "order": 2,
+  "requiredPrivilege": "app:clinical"
+},
 "bahmniClinicalPatientsSearchPsychiatrie": {
   "id": "bahmni.clinical.patients.search.psychiatriePatients",
   "extensionPointId": "org.bahmni.patient.search",
